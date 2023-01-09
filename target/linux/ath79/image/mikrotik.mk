@@ -47,6 +47,16 @@ define Device/mikrotik_routerboard-951ui-2nd
 endef
 TARGET_DEVICES += mikrotik_routerboard-951ui-2nd
 
+define Device/mikrotik_routerboard-wsap-5hac2nd
+  $(Device/mikrotik_nor)
+  SOC := qca9531
+  DEVICE_MODEL := RouterBOARD wsAP-5Hac2nD (wsAP ac lite)
+  DEVICE_PACKAGES += kmod-ath10k-ct-smallbuffers ath10k-firmware-qca9887-ct
+  IMAGE_SIZE := 16256k
+  SUPPORTED_DEVICES += rb-wsap-5hac2nd
+endef
+TARGET_DEVICES += mikrotik_routerboard-wsap-5hac2nd
+
 define Device/mikrotik_routerboard-952ui-5ac2nd
   $(Device/mikrotik_nor)
   SOC := qca9533

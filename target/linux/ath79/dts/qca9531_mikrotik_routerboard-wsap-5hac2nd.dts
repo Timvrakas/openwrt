@@ -1,0 +1,17 @@
+// SPDX-License-Identifier: GPL-2.0-or-later OR MIT
+
+#include "qca9533_mikrotik_routerboard-95x.dtsi"
+
+/ {
+	compatible = "mikrotik,routerboard-wsap-5hac2nd", "qca,qca9531";
+	model = "MikroTik RouterBOARD wsAP-5Hac2nD (wsAP ac lite)";
+};
+
+&pcie0 {
+ 	status = "okay";
+
+ 	wifi@0,0 {
+ 		compatible = "qcom,ath10k";
+ 		reg = <0 0 0 0 0>;
+ 	};
+};
