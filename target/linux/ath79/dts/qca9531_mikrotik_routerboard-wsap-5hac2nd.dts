@@ -7,6 +7,17 @@
 	model = "MikroTik RouterBOARD wsAP-5Hac2nD (wsAP ac lite)";
 };
 
+&eth0 {
+	status = "okay";
+
+	phy-handle = <&swphy0>;
+
+	gmac-config {
+		device = <&gmac>;
+		switch-phy-swap = <1>;
+	};
+};
+
 &pcie0 {
  	status = "okay";
 
